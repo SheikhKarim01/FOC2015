@@ -1,22 +1,33 @@
 <html>
 <head>
 	<title>Draw.it</title>
-	<link rel="stylesheet"  type="text/css" href="Styles/styles.css" />
+	<link rel="stylesheet" media="(max-width: 800px)" href="Styles/mobileCSS.css" />
+	<link rel="stylesheet" media="(min-width: 800px)" href="Styles/desktopCSS.css" />
 </head>
 <body onload="init()">
-    <canvas id="can" height=300px width=300px></canvas>
-    <div> Choose Color</div>
-    <div id="green" onclick="color(this)"></div>
-    <div id="blue" onclick="color(this)"></div>
-    <div id="red" onclick="color(this)"></div>
-	<div id="yellow" onclick="color(this)"></div>
-    <div id="orange" onclick="color(this)"></div>
-    <div id="black" onclick="color(this)"></div>
-    <div>Eraser</div>
-    <div id="white" onclick="color(this)"></div>
-    <input type="button" value="save" id="btn" size="30" onclick="save()">
-    <input type="button" value="clear" id="clr" size="23" onclick="erase()">
-	
+	<div class="header">
+		<a href="../index.html" class="block">Draw.It</a></div>
+	</div>
+	<div class="canvas">
+		<canvas id="can" height=300px width=300px></canvas>
+	</div>
+	<div class="colourPicker">
+		<div style="height: 20px"> Choose Color</div>
+		<div id="green" onclick="color(this)"></div>
+		<div id="blue" onclick="color(this)"></div>
+		<div id="red" onclick="color(this)"></div>
+		<div id="yellow" onclick="color(this)"></div>
+		<div id="orange" onclick="color(this)"></div>
+		<div id="black" onclick="color(this)"></div>
+		<div id="white" onclick="color(this)">
+			<span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">Eraser</span>
+		</div>
+	</div>
+		<input type="button" id="save" name="save" onclick="save()">
+		<label for="save">
+			<img src="Images/Save%20Button.png">
+		</label>
+		<input type="button" id="clear" name="clear" onclick="erase()">
 	<script src="Script/main.js"></script>
 </body>
 </html>
