@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: "Century Gothic","Arial",sans-serif;
+    
+}
+
+body{
+    background: #111;
+}
+
+
+header h1{
+
+    font-size: 100px;
+    text-align: center;
+    padding: 35px 0 0 0;
+    letter-spacing: 20px;
+    color:#eee;
+    
+}
+
+.themeBox{
+    width: 100%;
+    height: 150px;
+    margin: 50px 0;
+    background: #222;
+    box-sizing: border-box;
+    overflow:hidden;
+    padding: 0 300px;
+}
+
+.themeBox img{
+    height: 100%;
+    float: left;
+    
+}
+
+.themeDetails{
+    
+    height: 100%;
+    width: 400px;
+    padding: 15px;   
+    color: white;
+    float: left;
+    text-align: center;
+}
+
+.themeDetails h2{
+    font-size: 20px;
+    letter-spacing: 5px;
+}
