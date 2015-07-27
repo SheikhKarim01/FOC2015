@@ -40,13 +40,30 @@ header h1{
     
     height: 100%;
     width: 400px;
-    padding: 15px;   
+    padding: 10px 0 0 50px;   
     color: white;
     float: left;
-    text-align: center;
 }
 
-.themeDetails h2{
+h2{
     font-size: 20px;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
+    margin-bottom: 3px;
+    font-weight: 100;
+}
+
+.theme{
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+progress{
+    margin-bottom: 5px;
+    -webkit-appearance: none;
+	border: none;
+}
+
+.inProgress{
+    color: orange;
+    margin-bottom: 10px;
 }
