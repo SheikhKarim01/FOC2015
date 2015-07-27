@@ -1,8 +1,8 @@
 <html>
 <head>
 	<title>Draw.it</title>
-	<link rel="stylesheet" media="(max-width: 800px)" href="Styles/mobileCSS.css" />
-	<link rel="stylesheet" media="(min-width: 800px)" href="Styles/desktopCSS.css" />
+	<link rel="stylesheet" media="(max-width: 600px)" href="Styles/mobileCSS.css" />
+	<link rel="stylesheet" media="(min-width: 600px)" href="Styles/desktopCSS.css" />
 </head>
 <body onload="init()">
 	<div class="header">
@@ -23,11 +23,16 @@
 			<span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">Eraser</span>
 		</div>
 	</div>
-		<input type="button" id="save" name="save" onclick="save()">
-		<label for="save">
-			<img src="Images/Save%20Button.png">
-		</label>
-		<input type="button" id="clear" name="clear" onclick="erase()">
+		<div class="buttons">
+			<input type="button" id="save" name="save" onclick="save()">
+			<label for="save">
+				<img src="Images/Save%20Button.png">
+			</label>
+			<input type="button" id="clear" name="clear" onclick="erase()">
+			<label for="clear">
+				<img src="Images/Close%20Button.png">
+			</label>
+		</div>
 	<script src="Script/main.js"></script>
 </body>
 </html>
