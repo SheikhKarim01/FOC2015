@@ -1,0 +1,22 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,900);
+body {
+  margin: 0px;
+}
+
+body #content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+body #content .header {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 30px;
+  font-family: roboto;
+}
+
+#can, canvas {
+  border: 1px solid blue;
+}
