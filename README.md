@@ -5,6 +5,6 @@ Welcome.
 
 + Ben
 + Tommy
-+ Tom is the best
++ Tom is not the best
 + Sheikh
 + Anton
