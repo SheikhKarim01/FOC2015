@@ -6,8 +6,8 @@
   color: #fcfcfc;
 }
 ::selection {
-  background-color: #ff4c4c;
-  color: #fcfcfc;
+  background-color: none;
+  color: black;
 }
 
 a {
@@ -37,13 +37,37 @@ body {
 	line-height: 50px;
 	color: #fcfcfc;
 	font-weight: 300;
+    position: relative;
+    z-index: 3;
+    
 }
 
+<<<<<<< HEAD
 
 
+=======
+input {
+  display: none;
+    
+}
+
+.space{
+    padding-top: 50px;
+}
+
+label img,a img{
+    width: 100%;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+label img:hover, a img:hover{
+    opacity: 1;
+}
+>>>>>>> origin/master
 
 .canvas {
-	width: 80%;
+	width: 77%;
 	height: 100%;
 	z-index: -1;
 }
@@ -53,7 +77,7 @@ body {
 	height: 900px;
 	width: 900px;
 	top: calc(50% - 449px);
-	left: calc(50% - 373px);
+	left: calc(50% - 523px);
 	z-index: 1;
 }
 
@@ -83,7 +107,7 @@ body {
 canvas, #can {
   position: absolute;
   top: calc(50% - 150px);
-  left: calc(50% - 74px);
+  left: calc(50% - 224px);
   border: 1px solid #222;
   background-color: #fff;
   z-index: 3;
@@ -100,7 +124,7 @@ canvas, #can {
 }
 
 .buttons {
-	width: 5%;
+	width: 8%;
 	height: 100%;
 }
 
