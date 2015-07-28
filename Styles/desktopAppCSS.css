@@ -39,9 +39,8 @@ body {
 	font-weight: 300;
 }
 
-input {
-  display: none;
-}
+
+
 
 .canvas {
 	width: 80%;
@@ -142,3 +141,36 @@ canvas, #can {
   background-color: #eee;
   color: #222;
 }
+
+.Confirm{
+ position: fixed;
+ top: 10px;
+ left: 25%;
+ right: 25%;
+ background-color: lightgrey;
+ z-index: 10;
+ padding: 10px;
+transition: all 1s;
+}
+
+
+.ConfirmHidden{
+opacity: 0;
+		transform: translateX(-500%);
+		
+
+
+}
+
+.Confirm label {
+width: 30%;
+float: left;
+}
+
+
+.Confirm input {
+float: right;
+width: 70%;
+}
+
+
