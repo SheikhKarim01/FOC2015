@@ -7,18 +7,26 @@
 	<meta charset="utf-8" />
 </head>
 <body onload="init()">
+    
 	<div class="header">
-		<a href="../index.html" class="block">Draw.It</a></div>
+		<a href="../index.html" class="block">Draw.It</a>
+    </div>
+    
 	</div>
 	<div class="buttons">
+        
 		<input type="button" id="save" name="save" onclick="save()">
 		<label for="save">
-			<img src="Assets/Images/Save%20Button.png">
+			<img  class="space" src="Assets/Images/tick.png">
 		</label>
 		<input type="button" id="clear" name="clear" onclick="erase()">
 		<label for="clear">
-			<img src="Assets/Images/Close%20Button.png">
+			<img src="Assets/Images/cross.png">
 		</label>
+        
+        <a href="index.html">
+			<img src="Assets/Images/back.png">
+		</a>
 	</div>
 	<div class="canvas">
 		<canvas id="can" height=300px width=300px></canvas>
