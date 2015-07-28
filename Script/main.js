@@ -6,7 +6,7 @@ var canvas, ctx, flag = false,
     dot_flag = false;
 
 var x = "black",
-    y = 2;
+    y = 14;
 
 function init() {
     canvas = document.getElementById('can');

@@ -62,6 +62,7 @@ input {
 	position: absolute;
 	height: 300px;
 	width: 300px;
+	background
 }
 
 .middle {
@@ -90,7 +91,6 @@ canvas, #can {
 }
 
 .colourPicker {
-	top: 50px;
 	width: 100%;
 	height: 10%;
 	top: calc(100% - 150px);
