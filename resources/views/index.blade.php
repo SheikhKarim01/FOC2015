@@ -47,14 +47,14 @@
 
             <div class="imgBox">
                 <img src="{{ $painting->url }}" alt="skyscraper theme"/>
-                <progress max="9" value="1"></progress>
+                <progress max="{{ $painting->tileNumber }}" value="{{ $painting->tilesDone }}"></progress>
             </div>
 
             <div class="themeDetails">
 
                 <h3 class="theme">{{ $painting->theme }}</h3>
                 <h3 class="inProgress dis">In Progress</h3>
-                <h3 class="dis">11%</h3>
+                <h3 class="dis"><?php echo ($painting->tilesDone /  $painting->tileNumber) * 100 . '%'; ?></h3>
                 <h3 class="dis">Total Tiles: {{ $painting->tileNumber }}</h3>
 
             </div>
