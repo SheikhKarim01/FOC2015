@@ -92,6 +92,12 @@ label img:hover, a img:hover{
 	height: 300px;
 	width: 300px;
 	background-color: orangered;
+    overflow: hidden;
+}
+
+.grid img{
+    height: 100%;
+    width: 100%;
 }
 
 .middle {
