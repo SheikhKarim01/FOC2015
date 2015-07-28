@@ -4,7 +4,7 @@
     <title>gridraw</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <link href="/Styles/main.css" type="text/css" rel="stylesheet"/>
+    <link href="/css/main.css" type="text/css" rel="stylesheet"/>
 </head>
     
     
@@ -14,9 +14,9 @@
     
     
     <div id="buttons">
-        <a href="#"><img src="images/bTT2.png" alt="back to top button"/></a><br>
-        <a href="#"><img src="images/search2.png" alt="search button"/></a><br>
-        <a href="#"><img src="images/gallery2.png" alt="gallery button"/></a><br>
+        <a href="#"><img src="img/bTT2.png" alt="back to top button"/></a><br>
+        <a href="#"><img src="img/search2.png" alt="search button"/></a><br>
+        <a href="#"><img src="img/gallery2.png" alt="gallery button"/></a><br>
     </div>
 
 
@@ -45,7 +45,7 @@
     <a href="#" class="link">    
 
             <div class="imgBox">
-                <img src="images/skyscraper.jpg" alt="skyscraper theme"/>
+                <img src="img/skyscraper.jpg" alt="skyscraper theme"/>
                 <progress max="9" value="1"></progress>
             </div>
 
@@ -59,7 +59,7 @@
             </div>
 
             <div class="arrowBox">
-                <img src="images/arrow.png" alt="Arrow button" class="arrow"/>
+                <img src="img/arrow.png" alt="Arrow button" class="arrow"/>
             </div>
 
         </a>
@@ -72,7 +72,7 @@
 
 
             <div class="imgBox">
-                <img src="images/ocean.jpg" alt="ocean theme"/>
+                <img src="img/ocean.jpg" alt="ocean theme"/>
                 <progress max="9" value="9"></progress>
             </div>
 
@@ -85,7 +85,7 @@
 
             </div>
             <div class="arrowBox">
-                <img src="images/arrow.png" alt="Arrow button" class="arrow"/>
+                <img src="img/arrow.png" alt="Arrow button" class="arrow"/>
             </div>
 
         </a>
@@ -96,7 +96,7 @@
         <a href="#" class="link">
 
             <div class="imgBox">
-                <img src="images/christmas.jpg" alt="christmas theme"/>
+                <img src="img/christmas.jpg" alt="christmas theme"/>
                 <progress max="9" value="0"></progress>
             </div>
 
@@ -109,7 +109,7 @@
 
             </div>
             <div class="arrowBox">
-                <img src="images/arrow.png" alt="Arrow button" class="arrow"/>
+                <img src="img/arrow.png" alt="Arrow button" class="arrow"/>
             </div>
 
 
