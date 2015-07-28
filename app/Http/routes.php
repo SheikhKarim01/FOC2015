@@ -19,3 +19,12 @@ $app->get('/', function() use ($app) {
     	->with('paintings', $paintings);
 });
 
+
+
+$app->get('/{id}', function($id) use ($app) {
+
+
+	return $painting = \App\Painting::find($id);
+    //return view('')
+    	//->with('painting', $painting);
+});

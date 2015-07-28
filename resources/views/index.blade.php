@@ -43,7 +43,7 @@
 
     <div class="themeBox">
 
-        <a href="#" class="link">    
+        <a href="/{{ $painting->id }}" class="link">    
 
             <div class="imgBox">
                 <img src="{{ $painting->url }}" alt="skyscraper theme"/>
@@ -53,7 +53,16 @@
             <div class="themeDetails">
 
                 <h3 class="theme">{{ $painting->theme }}</h3>
-                <h3 class="inProgress dis">In Progress</h3>
+
+                <h3 class="inProgress dis">
+                @if ($painting->tilesDone === 9)
+                    <h3>Complete</h3>
+                @else 
+                    <h3>In Progress</h3>
+                @endif
+
+
+
                 <h3 class="dis"><?php echo ($painting->tilesDone /  $painting->tileNumber) * 100 . '%'; ?></h3>
                 <h3 class="dis">Total Tiles: {{ $painting->tileNumber }}</h3>
 
