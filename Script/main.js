@@ -53,7 +53,7 @@ function color(obj) {
             break;
     }
     if (x == "white") y = 14;
-    else y = 7;
+    else y = 14;
 
 }
 
@@ -62,6 +62,7 @@ function draw() {
     ctx.moveTo(prevX, prevY);
     ctx.lineTo(currX, currY);
     ctx.strokeStyle = x;
+    ctx.lineCap = 'round';
     ctx.lineWidth = y;
     ctx.stroke();
     ctx.closePath();
