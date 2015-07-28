@@ -53,7 +53,7 @@ function color(obj) {
             break;
     }
     if (x == "white") y = 14;
-    else y = 2;
+    else y = 7;
 
 }
 

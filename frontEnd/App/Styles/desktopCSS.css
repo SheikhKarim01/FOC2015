@@ -14,7 +14,7 @@ body {
   margin: 0px;
   width: 100%;
   height: 100%;
-  background-color: #f2f2f2;
+  background-color: #fcfcfc;
 }
 
 body .header {
@@ -45,6 +45,7 @@ canvas, #can {
   left: -webkit-calc(50% - 74px);
   left: calc(50% - 74px);
   border: 1px solid #222;
+  background-color: #fff;
 }
 
 .colourPicker {
