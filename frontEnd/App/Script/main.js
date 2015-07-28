@@ -53,7 +53,7 @@ function color(obj) {
             break;
     }
     if (x == "white") y = 14;
-    else y = 2;
+    else y = 7;
 
 }
 
@@ -68,7 +68,7 @@ function draw() {
 }
 
 function erase() {
-    var m = confirm("Want to clear");
+    var m = confirm("Are you sure you want to clear?");
     if (m) {
         ctx.clearRect(0, 0, w, h);
         document.getElementById("canvasimg").style.display = "none";
