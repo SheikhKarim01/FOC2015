@@ -24,7 +24,17 @@ $app->get('/', function() use ($app) {
 $app->get('/{id}', function($id) use ($app) {
 
 
-	return $painting = \App\Painting::find($id);
+	$painting = \App\Painting::find($id);
+
+	return $centerTile = $painting->tiles()
+		->where('x', '=', '1')
+		->where('y', '=', '1')
+		->get(); 
+
+
+
+
+	return;
     //return view('')
     	//->with('painting', $painting);
 });
