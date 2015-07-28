@@ -191,7 +191,7 @@ canvas:active,#can:active{
 }
 
 .brushBox img{
-    margin: 0 10px;
+    margin: 3px 10px;
     cursor: pointer;
     
    
@@ -271,10 +271,17 @@ canvas:active,#can:active{
     }
     
     #white{
-    
         width: calc(((100% / 7) - (50px / 7)) * 0.7);
-        
+ 
     }
 
+    .brushBox{
+        padding: 10px 0;
+    } 
+    
+    
+    
+    
+    
 
 }
