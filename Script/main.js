@@ -82,6 +82,14 @@ function save() {
     document.getElementById("canvasimg").style.display = "inline";
 }
 
+function back() {
+    var m = confirm("Are you sure you want to go back to the main menu?");
+    if (m) {
+        ctx.clearRect(0, 0, w, h);
+        document.getElementById("canvasimg").style.display = "none";
+    }
+}
+
 function findxy(res, e) {
     if (res == 'down') {
         prevX = currX;

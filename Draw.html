@@ -1,8 +1,10 @@
 <html>
 <head>
 	<title>Draw.it</title>
-	<link rel="stylesheet" media="(max-width: 850px)" href="Styles/mobileAppCSS.css" />
-	<link rel="stylesheet" media="(min-width: 850px)" href="Styles/desktopAppCSS.css" />
+    
+    <link rel="stylesheet" href="Styles/desktopAppCSS.css"/>
+	
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8" />
 </head>
@@ -17,16 +19,17 @@
         
 		<input type="button" id="save" name="save" onclick="save()">
 		<label for="save">
-			<img  class="space" src="Assets/Images/tick.png">
+			<img class="button-save" src="Assets/Images/tick.png">
 		</label>
 		<input type="button" id="clear" name="clear" onclick="erase()">
 		<label for="clear">
-			<img src="Assets/Images/cross.png">
+			<img class="button-clear" src="Assets/Images/cross.png">
 		</label>
         
-        <a href="index.html">
-			<img src="Assets/Images/back.png">
+        <a href="index.html" onclick="back()">
+			<img class="button-back" src="Assets/Images/back.png">
 		</a>
+        
 	</div>
 	<div class="canvas">
 		<canvas id="can" height=300px width=300px></canvas>
