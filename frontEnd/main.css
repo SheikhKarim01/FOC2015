@@ -9,15 +9,38 @@ body{
     background: #111;
 }
 
+::selection{
+    background: #66FFCC;
+}
+
+::-moz-selection{
+    background: #66FFCC;
+}
+
+
+
 
 header h1{
 
     font-size: 100px;
     text-align: center;
-    padding: 35px 0 0 0;
+    padding: 35px 0 100px 0;
     letter-spacing: 20px;
     color:#eee;
     
+}
+
+h2{
+    color: #eee;
+    padding-left: 400px;
+    font-size: 35px;
+    font-weight: 100;
+    
+}
+
+p{
+    padding: 20px 400px 100px 400px;
+    color: #eee;
 }
 
 .themeBox{
@@ -59,7 +82,7 @@ header h1{
     float: left;
 }
 
-h2{
+h3{
     font-size: 20px;
     letter-spacing: 3px;
     margin-bottom: 3px;
@@ -104,4 +127,25 @@ progress{
     top: 25%;
     height: 50%;
     transition: all 1s;
+}
+
+
+
+#buttons{
+    height: 200px;
+    padding-left: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+
+#buttons img{
+    width: 60px;
+    opacity: 0.7;
+    transition: opacity 0.5s;
+}
+
+#buttons img:hover{
+    opacity: 1;
 }
