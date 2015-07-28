@@ -19,6 +19,16 @@ body{
     background: #66FFCC;
 }
 
+span::-moz-selection {
+  background-color: #66a1ff;
+  color: auto;
+}
+
+span::selection{
+  background-color: #66a1ff;
+  color: auto;
+}
+
 header h1{
 
     font-size: 100px;
@@ -37,7 +47,7 @@ h2{
 }
 
 p{
-    padding: 20px 400px 100px 400px;
+    padding: 20px 400px 150px 400px;
     color: #eee;
 }
 
@@ -163,7 +173,7 @@ progress{
     }
     
     p{
-        padding: 0;
+        padding: 0 0 50px 0;
         width: 80%;
         margin: 0 auto;
     }
@@ -178,7 +188,7 @@ progress{
     }
 }
 
-@media (max-width: 960px){
+@media (max-width: 970px){
     .themeDetails{
         float: none;
         clear: both;
@@ -219,11 +229,28 @@ progress{
         display: none;
     }
     
-
-}
-
-@media (max-width: 650px){
-    h1{
-        
+    header h1{
+        font-size: 70px;
     }
+
 }
+
+@media (max-width: 700px){
+    header h1{
+        font-size: 40px;
+    }
+    
+    .link{
+        padding: 0;
+    }
+    
+    .themeDetails{
+        width: 100%;
+    }
+    
+    .theme{
+        text-align: center;
+    }
+    
+}
+

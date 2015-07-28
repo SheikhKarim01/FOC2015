@@ -1,17 +1,17 @@
 <html>
 <head>
-	<title>Draw.it</title>
+	<title>Collabartation</title>
     
-    <link rel="stylesheet" href="Styles/desktopAppCSS.css"/>
-	
-	
+    <link rel="stylesheet" href="Styles/draw.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8" />
+    
 </head>
+    
 <body onload="init()">
     
 	<div class="header">
-		<a href="../index.html" class="block">Draw.It</a>
+		<a href="index.html" class="block">COLLAB<span style="color: #66a1ff; display: inline;">ART</span>ATION</a>
     </div>
     
 	</div>
@@ -21,6 +21,7 @@
 		<label for="save">
 			<img class="button-save" src="Assets/Images/tick.png">
 		</label>
+        
 		<input type="button" id="clear" name="clear" onclick="erase()">
 		<label for="clear">
 			<img class="button-clear" src="Assets/Images/cross.png">
@@ -31,8 +32,11 @@
 		</a>
         
 	</div>
+    
 	<div class="canvas">
-		<canvas id="can" height=300px width=300px></canvas>
+        
+		<canvas id="can" height=300px width=300px onmouseover="check()"></canvas>
+        
 		<div class="grid">
 			<div class="top left"> Top Left</div>
 			<div class="top center">Top Center</div>
@@ -48,7 +52,6 @@
 	</div>
 	
 	<div class="colourPicker">
-		<div style="height: 20px"> Choose Colour</div>
 		<div id="green" onclick="color(this)"></div>
 		<div id="blue" onclick="color(this)"></div>
 		<div id="red" onclick="color(this)"></div>
@@ -56,8 +59,14 @@
 		<div id="orange" onclick="color(this)"></div>
 		<div id="black" onclick="color(this)"></div>
 		<div id="white" onclick="color(this)">
-			<span style="position: absolute; left: 50%; transform: translate(-50%, 0)">Eraser</span>
+			<span style="position: absolute; left: 50%; transform: translate(-50%, 0); top: 35%;">Eraser</span>
 		</div>
+        
+        <div class="brushBox">
+            <img src="Assets/Images/brush2.png" alt="small brush" onclick="brushChange(5)"/>
+            <img src="Assets/Images/brush3.png" alt="medium brush" onclick="brushChange(12)"/>
+            <img src="Assets/Images/brush4.png" alt="large brush" onclick="brushChange(22)"/>
+        </div>
 	</div>
     <div class="Confirm ConfirmHidden"> 
 		<p>Give us your details so we can let you know when this project is finished</p>

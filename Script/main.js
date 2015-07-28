@@ -5,8 +5,8 @@ var canvas, ctx, flag = false,
     currY = 0,
     dot_flag = false;
 
-var x = "black",
-    y = 14;
+var x = "#0C0C0C",
+    y = 5;
 
 function init() {
     canvas = document.getElementById('can');
@@ -46,15 +46,21 @@ function color(obj) {
             x = "#FF851B";
             break;
         case "black":
-            x = "#111";
+            x = "#0C0C0C";
             break;
         case "white":
             x = "white";
             break;
     }
-    if (x == "white") y = 14;
-    else y = 14;
 
+}
+
+function check(){
+    if (x == "white"){
+        document.getElementById("can").style.cursor = "url(Assets/Images/eraser2.png)";
+    }else{
+        document.getElementById("can").style.cursor = "crosshair";
+    }
 }
 
 function draw() {
@@ -120,4 +126,9 @@ function findxy(res, e) {
             draw();
         }
     }
+}
+
+
+function brushChange(size){
+    y = size;
 }
