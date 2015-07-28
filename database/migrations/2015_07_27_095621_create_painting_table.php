@@ -17,6 +17,10 @@ class CreatePaintingTable extends Migration
             $table->increments('id');
             $table->boolean('isFinished');
             $table->string('theme');
+            $table->integer('tileNumber');
+            $table->integer('tilesDone');
+            $table->string('url');
+            
 
         });
             // isFinished is if the

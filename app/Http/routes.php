@@ -14,13 +14,8 @@
 $app->get('/', function() use ($app) {
 
 
-	$painting = \App\Painting::find(1)->first();
-    return view('home')
-    	->with('painting', $painting);
+	$paintings = \App\Painting::all();
+    return view('index')
+    	->with('paintings', $paintings);
 });
 
-
-$app->get('/test', function() use ($app) {
-
-    return view('index');
-});

@@ -38,23 +38,24 @@
     <h2>Themes:</h2>
 
 
+@foreach ($paintings as $painting)
 
 
     <div class="themeBox">
 
-    <a href="#" class="link">    
+        <a href="#" class="link">    
 
             <div class="imgBox">
-                <img src="img/skyscraper.jpg" alt="skyscraper theme"/>
+                <img src="{{ $painting->url }}" alt="skyscraper theme"/>
                 <progress max="9" value="1"></progress>
             </div>
 
             <div class="themeDetails">
 
-                <h3 class="theme">Skyscraper</h3>
+                <h3 class="theme">{{ $painting->theme }}</h3>
                 <h3 class="inProgress dis">In Progress</h3>
                 <h3 class="dis">11%</h3>
-                <h3 class="dis">Total Tiles: 9</h3>
+                <h3 class="dis">Total Tiles: {{ $painting->tileNumber }}</h3>
 
             </div>
 
@@ -64,57 +65,8 @@
 
         </a>
     </div>
+@endforeach
 
-
-    <div class="themeBox">
-
-        <a href="#" class="link">
-
-
-            <div class="imgBox">
-                <img src="img/ocean.jpg" alt="ocean theme"/>
-                <progress max="9" value="9"></progress>
-            </div>
-
-            <div class="themeDetails">
-
-                <h3 class="theme">Ocean</h3>
-                <h3 class="inProgress dis">In Progress</h3>
-                <h3 class="dis">100%</h3>
-                <h3 class="dis">Total Tiles: 9</h3>
-
-            </div>
-            <div class="arrowBox">
-                <img src="img/arrow.png" alt="Arrow button" class="arrow"/>
-            </div>
-
-        </a>
-    </div>
-
-    <div class="themeBox">
-
-        <a href="#" class="link">
-
-            <div class="imgBox">
-                <img src="img/christmas.jpg" alt="christmas theme"/>
-                <progress max="9" value="0"></progress>
-            </div>
-
-            <div class="themeDetails">
-
-                <h3 class="theme">Christmas</h3>
-                <h3 class="inProgress dis">In Progress</h3>
-                <h3 class="dis">0%</h3>
-                <h3 class="dis">Total Tiles: 9</h3>
-
-            </div>
-            <div class="arrowBox">
-                <img src="img/arrow.png" alt="Arrow button" class="arrow"/>
-            </div>
-
-
-        </a>
-    </div>
 
 
     
