@@ -21,6 +21,7 @@ body {
 	height: 100%;
 	overflow: hidden;
 	background-color: #fcfcfc;
+	font-family: Roboto, sans-serif;
 }
 
 .header, .colourPicker, .canvas, .buttons {
@@ -32,7 +33,6 @@ body {
 	height: 50px;
 	background-color: #444;
 	border-bottom: 2px solid #222;
-	font-family: roboto;
 	font-size: 40px;
 	line-height: 50px;
 	color: #fcfcfc;
@@ -42,11 +42,7 @@ body {
     
 }
 
-<<<<<<< HEAD
-
-
-=======
-input {
+#save, #clear{
   display: none;
     
 }
@@ -64,7 +60,6 @@ label img,a img{
 label img:hover, a img:hover{
     opacity: 1;
 }
->>>>>>> origin/master
 
 .canvas {
 	width: 77%;
