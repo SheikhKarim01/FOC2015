@@ -59,7 +59,7 @@ p{
     padding: 0 300px;
     width: 100%;
     display: block;
-    
+    text-decoration: none;
 }
 
 .link:hover .arrow{
@@ -67,11 +67,17 @@ p{
     
 }
 
-.themeBox img{
+.imgBox{
+    position: relative;
     height: 100%;
     float: left;
-    
 }
+
+
+.imgBox img{
+    height: 100%;
+}
+
 
 .themeDetails{
     
@@ -95,9 +101,12 @@ h3{
 }
 
 progress{
-    margin-bottom: 5px;
     -webkit-appearance: none;
 	border: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
 }
 
 .inProgress{
@@ -148,4 +157,75 @@ progress{
 
 #buttons img:hover{
     opacity: 1;
+}
+
+@media (max-width: 1350px){
+    .link{
+        padding: 0 100px;
+    }
+    
+    p{
+        padding: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    h2{
+        padding: 0;
+        text-align: center;
+    }
+    
+    h2{
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 960px){
+    .themeDetails{
+        float: none;
+        clear: both;
+        height: 100px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        
+    }
+    .themeBox{
+        background: none;
+        height: 400px;
+        padding: 0;
+        
+    }
+    
+    h3{
+        padding: 15px 50px 0;
+    }
+    
+    .imgBox{
+        width: 300px;
+        margin: 0 auto;
+        height: auto;
+        float: none;
+    }
+    
+    .imgBox img{
+        display: block;
+        float: none;
+        clear: both; 
+        margin: 0 auto;
+        height: 300px;
+        text-align: center;
+    }
+    
+    .arrow, .arrowBox, .dis{
+        display: none;
+    }
+    
+
+}
+
+@media (max-width: 650px){
+    h1{
+        
+    }
 }
