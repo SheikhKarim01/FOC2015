@@ -55,6 +55,8 @@ label img,a img{
     width: 100%;
     cursor: pointer;
     opacity: 0.7;
+    position: relative;
+    z-index: 3;
 }
 
 label img:hover, a img:hover{
@@ -124,12 +126,13 @@ canvas, #can {
 }
 
 #green, #blue, #red, #orange, #yellow, #black, #white {
-  position: relative;
-  width: 100%;
-  height: -webkit-calc((100% / 7) - (50px / 7));
-  height: calc((100% / 7) - (50px / 7));
-  display: block;
-  transition: 0.2s all ease;
+    position: relative;
+    width: 100%;
+    height: -webkit-calc((100% / 7) - (50px / 7));
+    height: calc((100% / 7) - (50px / 7));
+    display: block;
+    transition: 0.2s all ease;
+    cursor: pointer;
 }
 
 #green {
