@@ -1,9 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,900);
 ::-moz-selection {
   background-color: #ff4c4c;
+  color: #fcfcfc;
 }
 ::selection {
   background-color: #ff4c4c;
+  color: #fcfcfc;
 }
 
 a {
@@ -17,7 +19,7 @@ body {
   background-color: #fcfcfc;
 }
 
-body .header {
+.header {
   position: absolute;
   height: 50px;
   width: 100%;
@@ -25,7 +27,7 @@ body .header {
   border-bottom: 2px solid #222;
 }
 
-body .header .block {
+.header .block {
   position: relative;
   font-family: roboto;
   color: #eee;
@@ -62,7 +64,7 @@ canvas, #can {
   cursor: pointer;
 }
 
-.colourPicker #green, .colourPicker #blue, .colourPicker #red, .colourPicker #yellow, .colourPicker #orange, .colourPicker #black, .colourPicker #white {
+#green, #blue, #red, #orange, #black, #white {
   position: relative;
   width: 150px;
   height: -webkit-calc((100% / 7) - (50px / 7));
@@ -70,31 +72,31 @@ canvas, #can {
   display: block;
 }
 
-.colourPicker #green {
+#green {
   background-color: green;
 }
 
-.colourPicker #blue {
+#blue {
   background-color: blue;
 }
 
-.colourPicker #red {
+#red {
   background-color: red;
 }
 
-.colourPicker #yellow {
+#yellow {
   background-color: yellow;
 }
 
-.colourPicker #orange {
+#orange {
   background-color: orange;
 }
 
-.colourPicker #black {
+#black {
   background-color: #111;
 }
 
-.colourPicker #white {
+#white {
   background-color: #eee;
   color: #222;
 }
