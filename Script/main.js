@@ -74,10 +74,14 @@ function initButtons(){
     });
 
     $('.button-clear').on("click", function(){
-
-        var m = confirm("Are you sure you want to clear?");
-        if (m) {
+        
+        var r = confirm("Are you sure you want to clear this drawing?");
+        
+        if (r == true){
             ctx.clearRect(0, 0, w, h);
+            return false;
+        }else{
+            return false;
         }
 
     });
