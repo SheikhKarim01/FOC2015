@@ -12,7 +12,7 @@
 */
 
 
-
+use Illuminate\Http\Request;
 
 
 
@@ -24,7 +24,19 @@ $app->get('/', function() use ($app) {
     	->with('paintings', $paintings);
 });
 
+$app->get('/draw', function() use ($app) {
+    return view('draw');
+});
 
+$app->get('/submit', function() use($app) {
+	return "hey";
+});
+
+$app->post('/submit', function(Request $request) use($app) {
+	$data = $request->input('imgBase64');
+	$data = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $data));
+	file_put_contents('img/upload.png', $data);
+});
 
 $app->get('/{id}', function($id) use ($app) {
 
@@ -52,6 +64,3 @@ $app->get('/{id}', function($id) use ($app) {
     	//->with('painting', $painting);
 });
 
-$app->get('/draw', function() use ($app) {
-    return view('draw');
-});

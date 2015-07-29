@@ -8,7 +8,7 @@
     
 </head>
     
-<body onload="init()">
+<body >
     
 	<div class="header">
 		<a href="/" class="block">COLLAB<span style="color: #66a1ff; display: inline;">ART</span>ATION</a>
@@ -17,17 +17,17 @@
 	</div>
 	<div class="buttons">
         
-		<input type="button" id="save" name="save" onclick="save()">
+		<input type="button" id="save" name="save">
 		<label for="save">
 			<img class="button-save" src="img/tick.png">
 		</label>
         
-		<input type="button" id="clear" name="clear" onclick="erase()">
+		<input type="button" id="clear" name="clear">
 		<label for="clear">
 			<img class="button-clear" src="img/cross.png">
 		</label>
         
-        <a href="index.html" onclick="back()">
+        <a href="index.html" >
 			<img class="button-back" src="img/back.png">
 		</a>
         
@@ -77,8 +77,10 @@
 		</form>
 	</div>
 	
-<script src="Script/main.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
+    <script src="script/main.js"></script>
+
 	
 </body>
 </html>
