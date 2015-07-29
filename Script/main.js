@@ -83,11 +83,25 @@ function erase() {
 }
 
 function save() {
-    document.getElementById("canvasimg").style.border = "2px solid";
+    
     var dataURL = canvas.toDataURL();
-    document.getElementById("canvasimg").src = dataURL;
-    document.getElementById("canvasimg").style.display = "inline";
+    
+    $.ajax({
+        type: "POST",
+        url: "/upload",
+        data: { 
+         imgBase64: dataURL
+        }
+    }).done(function(o) {
+        console.log('saved'); 
+        // If you want the file to be visible in the browser 
+        // - please modify the callback in javascript. All you
+        // need is to return the url to the file, you just saved 
+        // and than put the image in your browser.
+    });
+    
 }
+
 
 function back() {
     var m = confirm("Are you sure you want to go back to the main menu?");
