@@ -56,11 +56,15 @@
                 <h3 class="theme">{{ $painting->theme }}</h3>
 
                 <h3 class="inProgress dis">
-                @if ($painting->tilesDone === 9)
+                @if ($painting->tilesDone === $painting->tileNumber)
                     <h3>Complete</h3>
+                @elseif($painting->tilesDone === ($painting->tileNumber) - $painting->tileNumber)
+                  <h3>Not Started</h3>
                 @else 
                     <h3>In Progress</h3>
                 @endif
+
+
                 </h3>
 
                 <h3 class="dis"><?php echo ($painting->tilesDone /  $painting->tileNumber) * 100 . '%'; ?></h3>
