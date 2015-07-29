@@ -11,6 +11,11 @@
 |
 */
 
+
+
+
+
+
 $app->get('/', function() use ($app) {
 
 
@@ -45,4 +50,8 @@ $app->get('/{id}', function($id) use ($app) {
 	return;
     //return view('')
     	//->with('painting', $painting);
+});
+
+$app->get('/draw', function() use ($app) {
+    return view('draw');
 });
