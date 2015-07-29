@@ -27,7 +27,7 @@
 			<img class="button-clear" src="img/cross.png">
 		</label>
         
-        <a href="index.html" onclick="back()">
+        <a href="/" onclick="back()">
 			<img class="button-back" src="img/back.png">
 		</a>
         
