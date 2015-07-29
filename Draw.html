@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Collabartation</title>
+	<title>Collabart</title>
     
     <link rel="stylesheet" href="Styles/draw.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,31 +11,31 @@
 <body>
     
 	<div class="header">
-		<a href="index.html" class="block">COLLAB<span style="color: #66a1ff; display: inline;">ART</span>ATION</a>
+		<a href="index.html" class="block">COLLAB<span style="color: #66a1ff; display: inline;">ART</span></a>
     </div>
     
-	</div>
+	
 	<div class="buttons">
         
-		<input type="button" id="save" name="save">
-		<label for="save">
+		 
+		<button class="button-save" id="save">
 			<img class="button-save" src="Assets/Images/tick.png">
-		</label>
+		</button>
         
-		<input type="button" id="clear" name="clear">
-		<label for="clear">
+		
+		<button for="clear" id="clear" class="button-clear">
 			<img class="button-clear" src="Assets/Images/cross.png">
-		</label>
+		</button>
         
-        <a href="index.html">
+        <button href="index.html">
 			<img class="button-back" src="Assets/Images/back.png">
-		</a>
+		</button>
         
 	</div>
     
 	<div class="canvas">
         
-		<canvas id="can" height=300px width=300px onmouseover="check()"></canvas>
+		<canvas id="can" height=300px width=300px></canvas>
         
 		<div class="grid">
 			<div class="top left"><img src="Assets/Images/test/6.jpg" alt="picture test"/></div>
@@ -69,12 +69,21 @@
             <img class="background" src="Assets/Images/brush4.png" alt="mega brush" id="mega"/>
         </div>
 	</div>
+    
+    
     <div class="confirm confirmHidden"> 
-		<p>Give us your details so we can let you know when this project is finished</p>
-		<form action="demo_form.asp">
+        
+        <img src="Assets/Images/cross.png" alt="exit button"/>
+        
+        <a class="confirmTitle" href="index.html" class="block">COLLAB<span style="color: #66a1ff; display: inline;">ART</span></a>
+        
+		<p>Let us know your email or phonenumber so we can let you know when this project is finished</p>
+		<form>
+            
 			<label>Email:</label> <input placeholder= "example@mail.com" type="text" name="fname"><br>
 			<label>Phone number:</label> <input placeholder= "02312345678"  type="text" name="lname"><br>
-			<input type="submit" value="Submit">
+			<input type="submit" value="SUBMIT" id="submit">
+            
 		</form>
 	</div>
 	

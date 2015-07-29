@@ -33,13 +33,7 @@ $(document).ready(function(){
 });
 
 
-function check(){
-    if (x == "white"){
-        document.getElementById("can").style.cursor = "url(Assets/Images/eraser2.png)";
-    }else{
-        document.getElementById("can").style.cursor = "crosshair";
-    }
-}
+
 
 function draw() {
     ctx.beginPath();
@@ -55,24 +49,27 @@ function draw() {
 function initButtons(){
     
     console.log('Initialise buttons...');
+    
+    $(".button-save").on("click",function(){
+        $(".confirm").removeClass("confirmHidden");
+    });
 
-    $('.button-save').on("click",  function() {
+    $("#submit").on("click",  function(e) {
+        
+        e.preventDefault();
+            
+        var dataURL = canvas.toDataURL();
 
-            var dataURL = canvas.toDataURL();
-
-            $.ajax({
-                type: "POST",
-                url: "/upload",
-                data: { 
-                 imgBase64: dataURL
-                }
-            }).done(function(o) {
-                console.log('saved'); 
-                // If you want the file to be visible in the browser 
-                // - please modify the callback in javascript. All you
-                // need is to return the url to the file, you just saved 
-                // and than put the image in your browser.
-            });
+        $.ajax({
+            type: "POST",
+            url: "/upload",
+            data: { 
+             imgBase64: dataURL
+            }
+        }).done(function(o) {
+            console.log('saved'); 
+            
+        });
 
     });
 
@@ -81,7 +78,6 @@ function initButtons(){
         var m = confirm("Are you sure you want to clear?");
         if (m) {
             ctx.clearRect(0, 0, w, h);
-            document.getElementById("canvasimg").style.display = "none";
         }
 
     });
@@ -91,7 +87,7 @@ function initButtons(){
         var m = confirm("Are you sure you want to go back to the main menu?");
         if (m) {
             ctx.clearRect(0, 0, w, h);
-            document.getElementById("canvasimg").style.display = "none";
+            document.location.href = "../FOC2015/index.html";
         }
 
     });
@@ -123,7 +119,7 @@ function initButtons(){
             break;
     }
         
-    })
+    });
     
     $('.brushBox img').on("click",function(){
         if ($(this).attr('id') == "small"){
@@ -135,6 +131,18 @@ function initButtons(){
         }else if($(this).attr('id') == "mega"){
             y=100;
         }
+    });
+    
+    $("canvas").on("mouseover",function(){
+        if (x == "white"){
+            document.getElementById("can").style.cursor = "cell";
+        }else{
+            document.getElementById("can").style.cursor = "crosshair";
+        }
+    });
+    
+    $(".confirm img").on("click",function(){
+        $(".confirm").addClass("confirmHidden")
     })
 }
 
