@@ -60,8 +60,7 @@
                 @else 
                     <h3>In Progress</h3>
                 @endif
-
-
+                </h3>
 
                 <h3 class="dis"><?php echo ($painting->tilesDone /  $painting->tileNumber) * 100 . '%'; ?></h3>
                 <h3 class="dis">Total Tiles: {{ $painting->tileNumber }}</h3>

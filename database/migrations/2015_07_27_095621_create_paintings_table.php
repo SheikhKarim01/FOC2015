@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePaintingTable extends Migration
+class CreatePaintingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -20,7 +20,7 @@ class CreatePaintingTable extends Migration
             $table->integer('tileNumber');
             $table->integer('tilesDone');
             $table->string('url');
-            
+            $table->integer('median');
 
         });
             // isFinished is if the

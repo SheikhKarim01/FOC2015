@@ -24,11 +24,17 @@ $app->get('/', function() use ($app) {
 $app->get('/{id}', function($id) use ($app) {
 
 
+
 	$painting = \App\Painting::find($id);
+	$median = (((sqrt($painting->tileNumber) + 1) / 2) - 1);
+               
+     
+
+
 
 	return $centerTile = $painting->tiles()
-		->where('x', '=', '1')
-		->where('y', '=', '1')
+		->where('x', '=', $median)
+		->where('y', '=', $median)
 		->get(); 
 
 
