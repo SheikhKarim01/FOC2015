@@ -35,23 +35,49 @@ $app->get('/{id}', function($id) use ($app) {
 
 
 	$painting = \App\Painting::find($id);
-	$median = (((sqrt($painting->tileNumber) + 1) / 2) - 1);
+	$median = (int)(((sqrt($painting->tileNumber) + 1) / 2) - 1);
                
      $centerTile = $painting->tiles()
 		->where('x', '=', $median)
 		->where('y', '=', $median)
 		->get()->first(); 
+ 
 
 
 	if ($centerTile->isLocked === 0) {
 		return $centerTile;
-	} else {
+	}
+	else {
+			for ($i=0; $i < 1; $i++) { 
+				# code...
+			
+ 			$randomTile = $painting->tiles()
+ 			->where('isLocked', '=', 0)
+ 			->get()
+ 			->random(1);
 
+
+			echo $randomTile;
+		}
+
+			/*echo '<p>';
+			echo $x;
+			echo $y;
+			echo '</p>';*/
 	}
 
+			/*
+
+		
+			$randomTile = $painting->tiles()
+			->where('x', '=', $x)
+			->where('y', '=', $y)
+			->get()->first();
+			echo $randomTile;
 
 
-	return;
+		return $randomTile;*/
+	
     //return view('')
     	//->with('painting', $painting);
 });
