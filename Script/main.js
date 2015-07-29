@@ -8,7 +8,8 @@ var canvas, ctx, flag = false,
 var x = "#0C0C0C",
     y = 5;
 
-function init() {
+$(document).ready(function(){
+    
     canvas = document.getElementById('can');
     ctx = canvas.getContext("2d");
     w = canvas.width;
@@ -26,7 +27,10 @@ function init() {
     canvas.addEventListener("mouseout", function (e) {
         findxy('out', e)
     }, false);
-}
+    
+    initButtons();
+    
+});
 
 function color(obj) {
     switch (obj.id) {
@@ -74,41 +78,50 @@ function draw() {
     ctx.closePath();
 }
 
-function erase() {
-    var m = confirm("Are you sure you want to clear?");
-    if (m) {
-        ctx.clearRect(0, 0, w, h);
-        document.getElementById("canvasimg").style.display = "none";
-    }
-}
+function initButtons(){
+    
+    console.log('Initialise buttons...');
 
-function save() {
-    
-    var dataURL = canvas.toDataURL();
-    
-    $.ajax({
-        type: "POST",
-        url: "/upload",
-        data: { 
-         imgBase64: dataURL
-        }
-    }).done(function(o) {
-        console.log('saved'); 
-        // If you want the file to be visible in the browser 
-        // - please modify the callback in javascript. All you
-        // need is to return the url to the file, you just saved 
-        // and than put the image in your browser.
+    $('.button-save').on("click",  function() {
+
+            var dataURL = canvas.toDataURL();
+
+            $.ajax({
+                type: "POST",
+                url: "/upload",
+                data: { 
+                 imgBase64: dataURL
+                }
+            }).done(function(o) {
+                console.log('saved'); 
+                // If you want the file to be visible in the browser 
+                // - please modify the callback in javascript. All you
+                // need is to return the url to the file, you just saved 
+                // and than put the image in your browser.
+            });
+
     });
-    
-}
 
+    $('.button-clear').on("click", function(){
 
-function back() {
-    var m = confirm("Are you sure you want to go back to the main menu?");
-    if (m) {
-        ctx.clearRect(0, 0, w, h);
-        document.getElementById("canvasimg").style.display = "none";
-    }
+        var m = confirm("Are you sure you want to clear?");
+        if (m) {
+            ctx.clearRect(0, 0, w, h);
+            document.getElementById("canvasimg").style.display = "none";
+        }
+
+    });
+
+    $('.button-back').on("click", function() {
+
+        var m = confirm("Are you sure you want to go back to the main menu?");
+        if (m) {
+            ctx.clearRect(0, 0, w, h);
+            document.getElementById("canvasimg").style.display = "none";
+        }
+
+    });
+
 }
 
 function findxy(res, e) {
