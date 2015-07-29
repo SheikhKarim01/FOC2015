@@ -41,7 +41,6 @@
 
 @foreach ($paintings as $painting)
 
-
     <div class="themeBox">
 
         <a href="/{{ $painting->id }}" class="link">    
@@ -79,7 +78,6 @@
         </a>
     </div>
 @endforeach
-
 
 
     
