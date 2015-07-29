@@ -24,6 +24,10 @@ $app->get('/', function() use ($app) {
     	->with('paintings', $paintings);
 });
 
+$app->get('/draw', function() use ($app) {
+    return view('draw');
+});
+
 
 
 $app->get('/{id}', function($id) use ($app) {
@@ -52,6 +56,3 @@ $app->get('/{id}', function($id) use ($app) {
     	//->with('painting', $painting);
 });
 
-$app->get('/draw', function() use ($app) {
-    return view('draw');
-});
