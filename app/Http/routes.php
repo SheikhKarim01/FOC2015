@@ -28,15 +28,17 @@ $app->get('/{id}', function($id) use ($app) {
 	$painting = \App\Painting::find($id);
 	$median = (((sqrt($painting->tileNumber) + 1) / 2) - 1);
                
-     
-
-
-
-	return $centerTile = $painting->tiles()
+     $centerTile = $painting->tiles()
 		->where('x', '=', $median)
 		->where('y', '=', $median)
-		->get(); 
+		->get()->first(); 
 
+
+	if ($centerTile->isLocked === 0) {
+		return $centerTile;
+	} else {
+
+	}
 
 
 
