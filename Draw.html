@@ -52,21 +52,21 @@
 	</div>
 	
 	<div class="colourPicker">
-		<div id="green" onclick="color(this)"></div>
-		<div id="blue" onclick="color(this)"></div>
-		<div id="red" onclick="color(this)"></div>
-		<div id="yellow" onclick="color(this)"></div>
-		<div id="orange" onclick="color(this)"></div>
-		<div id="black" onclick="color(this)"></div>
-		<div id="white" onclick="color(this)">
+		<div class="colourPick" id="green"></div>
+		<div class="colourPick" id="blue"></div>
+		<div class="colourPick" id="red"></div>
+		<div class="colourPick" id="yellow"></div>
+		<div class="colourPick" id="orange"></div>
+		<div class="colourPick" id="black"></div>
+		<div class="colourPick" id="white">
 			<span style="position: absolute; left: 50%; transform: translate(-50%, 0); top: 35%;">Eraser</span>
 		</div>
         
         <div class="brushBox">
-            <img src="Assets/Images/brush2.png" alt="small brush" onclick="brushChange(5)"/>
-            <img src="Assets/Images/brush3.png" alt="medium brush" onclick="brushChange(12)"/>
-            <img src="Assets/Images/brush4.png" alt="large brush" onclick="brushChange(22)"/>
-            <img class="background" src="Assets/Images/brush4.png" alt="mega brush" onclick="brushChange(100)"/>
+            <img src="Assets/Images/brush2.png" alt="small brush" id="small"/>
+            <img src="Assets/Images/brush3.png" alt="medium brush" id="medium"/>
+            <img src="Assets/Images/brush4.png" alt="large brush" id="large"/>
+            <img class="background" src="Assets/Images/brush4.png" alt="mega brush" id="mega"/>
         </div>
 	</div>
     <div class="confirm confirmHidden"> 

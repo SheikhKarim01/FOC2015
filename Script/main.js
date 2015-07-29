@@ -32,32 +32,6 @@ $(document).ready(function(){
     
 });
 
-function color(obj) {
-    switch (obj.id) {
-        case "green":
-            x = "#2ECC40";
-            break;
-        case "blue":
-            x = "#0074D9";
-            break;
-        case "red":
-            x = "#FF4136";
-            break;
-        case "yellow":
-            x = "#FFDC00"
-            break;
-        case "orange":
-            x = "#FF851B";
-            break;
-        case "black":
-            x = "#0C0C0C";
-            break;
-        case "white":
-            x = "white";
-            break;
-    }
-
-}
 
 function check(){
     if (x == "white"){
@@ -122,6 +96,46 @@ function initButtons(){
 
     });
 
+    $('.colourPick').on("click",function(){
+        
+        
+        switch (this.id) {
+        case "green":
+            x = "#2ECC40";
+            break;
+        case "blue":
+            x = "#0074D9";
+            break;
+        case "red":
+            x = "#FF4136";
+            break;
+        case "yellow":
+            x = "#FFDC00"
+            break;
+        case "orange":
+            x = "#FF851B";
+            break;
+        case "black":
+            x = "#0C0C0C";
+            break;
+        case "white":
+            x = "white";
+            break;
+    }
+        
+    })
+    
+    $('.brushBox img').on("click",function(){
+        if ($(this).attr('id') == "small"){
+            y = 5;
+        }else if($(this).attr('id') == "medium"){
+            y=12;
+        }else if($(this).attr('id') == "large"){
+            y=22;
+        }else if($(this).attr('id') == "mega"){
+            y=100;
+        }
+    })
 }
 
 function findxy(res, e) {
@@ -155,7 +169,3 @@ function findxy(res, e) {
     }
 }
 
-
-function brushChange(size){
-    y = size;
-}
