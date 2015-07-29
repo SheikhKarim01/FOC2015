@@ -217,7 +217,7 @@ canvas:active,#can:active{
 }
 
 
-.Confirm{
+.confirm{
     position: fixed;
     top: 10px;
     left: 25%;
@@ -229,17 +229,17 @@ canvas:active,#can:active{
 }
 
 
-.ConfirmHidden{
+.confirmHidden{
     opacity: 0;
     transform: translateX(-500%);
 }
 
-.Confirm label {
+.confirm label {
     width: 30%;
     float: left;
 }
 
-.Confirm input {
+.confirm input {
     float: right;
     width: 70%;
 }
