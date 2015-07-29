@@ -4,7 +4,7 @@
     <title>gridraw</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <link href="/css/main.css" type="text/css" rel="stylesheet"/>
+    <link href="css/main.css" type="text/css" rel="stylesheet"/>
 </head>
     
     
@@ -23,15 +23,16 @@
     <header>
 
         <h1>
-            DRAW.IT
+           COLLAB<span class="blue" style="color: #66a1ff; display: inline}">ART</span>ATION
         </h1>
+        
 
     </header>
 
-    <h2>What is Draw.it? (temp name)</h2>
+    <h2>What is Collab<span style="color: #66a1ff; display: inline;">art</span>ation?</h2>
 
     <p>
-        Draw.it is an app that allows random people from all over the world to work on a piece of art together. When you pick one of the themes you will be brought to a single frame in a grid and you will only be able to see the edges of the frames around that point. You should then connect your drawing to the ones around to help create a bigger piece of art.
+        Collab<span style="color: #66a1ff; display: inline;">art</span>ation is an app that allows random people from all over the world to work on a piece of art together. When you pick one of the themes you will be brought to a single frame in a grid and you will only be able to see the edges of the frames around that point. You should then connect your drawing to the ones around to help create a bigger piece of art.
 
     </p>
 
@@ -46,7 +47,7 @@
         <a href="/{{ $painting->id }}" class="link">    
 
             <div class="imgBox">
-                <img src="{{ $painting->url }}" alt="skyscraper theme"/>
+                <img src="{{ $painting->url }}" alt="{{ $painting->url }}"/>
                 <progress max="{{ $painting->tileNumber }}" value="{{ $painting->tilesDone }}"></progress>
             </div>
 

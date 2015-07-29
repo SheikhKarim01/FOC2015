@@ -1,12 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,900);
+
 *{
     margin:0;
     padding: 0;
-    font-family: "Century Gothic","Arial",sans-serif;
     box-sizing: border-box;
 }
 
 body{
     background: #111;
+	font-family: Roboto, sans-serif;
 }
 
 ::selection{
@@ -17,29 +19,35 @@ body{
     background: #66FFCC;
 }
 
+span::-moz-selection {
+  background-color: #66a1ff;
+  color: auto;
+}
 
-
+span::selection{
+  background-color: #66a1ff;
+  color: auto;
+}
 
 header h1{
 
     font-size: 100px;
     text-align: center;
-    padding: 35px 0 100px 0;
-    letter-spacing: 20px;
-    color:#eee;
-    
+    padding: 35px 0 80px 0;
+    letter-spacing: 0px;
+    color:#66FFCC;
+	text-transform: uppercase;
 }
 
 h2{
     color: #eee;
     padding-left: 400px;
     font-size: 35px;
-    font-weight: 100;
-    
+    font-weight: 400;
 }
 
 p{
-    padding: 20px 400px 100px 400px;
+    padding: 20px 400px 150px 400px;
     color: #eee;
 }
 
@@ -165,7 +173,7 @@ progress{
     }
     
     p{
-        padding: 0;
+        padding: 0 0 50px 0;
         width: 80%;
         margin: 0 auto;
     }
@@ -180,7 +188,7 @@ progress{
     }
 }
 
-@media (max-width: 960px){
+@media (max-width: 970px){
     .themeDetails{
         float: none;
         clear: both;
@@ -221,11 +229,28 @@ progress{
         display: none;
     }
     
-
-}
-
-@media (max-width: 650px){
-    h1{
-        
+    header h1{
+        font-size: 70px;
     }
+
 }
+
+@media (max-width: 700px){
+    header h1{
+        font-size: 40px;
+    }
+    
+    .link{
+        padding: 0;
+    }
+    
+    .themeDetails{
+        width: 100%;
+    }
+    
+    .theme{
+        text-align: center;
+    }
+    
+}
+
