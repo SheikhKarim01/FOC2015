@@ -197,14 +197,17 @@ canvas:active,#can:active{
 }
 
 .brushBox img{
-    margin: 3px 10px;
+    margin: 3px 3spx;
     cursor: pointer;
-    
    
 }
 
 .brushBox img:hover{
     opacity: 0.7;
+}
+
+.background{
+    width: 50px;
 }
 
 
@@ -271,7 +274,7 @@ canvas:active,#can:active{
     }
 
     #green, #blue, #red, #orange, #yellow, #black, #white {
-        width: calc((100% / 7) - (50px / 7));
+        width: calc((80% / 7) - (50px / 7));
         height: 100%;
         float: left;
     }
