@@ -4,7 +4,7 @@
     <title>gridraw</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <link href="css/main.css" type="text/css" rel="stylesheet"/>
+    <link href="/css/main.css" type="text/css" rel="stylesheet"/>
 </head>
     
     
@@ -14,9 +14,9 @@
     
     
     <div id="buttons">
-        <a href="#"><img src="img/bTT2.png" alt="back to top button"/></a><br>
-        <a href="#"><img src="img/search2.png" alt="search button"/></a><br>
-        <a href="#"><img src="img/gallery2.png" alt="gallery button"/></a><br>
+        <a href="#"><img src="/img/bTT2.png" alt="back to top button"/></a><br>
+        <a href="#"><img src="/img/search2.png" alt="search button"/></a><br>
+        <a href="#"><img src="/img/gallery2.png" alt="gallery button"/></a><br>
     </div>
 
 
@@ -72,7 +72,7 @@
             </div>
 
             <div class="arrowBox">
-                <img src="img/arrow.png" alt="Arrow button" class="arrow"/>
+                <img src="/img/arrow.png" alt="Arrow button" class="arrow"/>
             </div>
 
         </a>

@@ -2,7 +2,7 @@
 <head>
 	<title>Collabartation</title>
     
-    <link rel="stylesheet" href="css/draw.css"/>
+    <link rel="stylesheet" href="/css/draw.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8" />
     
@@ -19,16 +19,16 @@
         
 		<input type="button" id="save" name="save">
 		<label for="save">
-			<img class="button-save" src="img/tick.png">
+			<img class="button-save" src="/img/tick.png">
 		</label>
         
 		<input type="button" id="clear" name="clear">
 		<label for="clear">
-			<img class="button-clear" src="img/cross.png">
+			<img class="button-clear" src="/img/cross.png">
 		</label>
         
-        <a href="index.html" >
-			<img class="button-back" src="img/back.png">
+        <a href="/" >
+			<img class="button-back" src="/img/back.png">
 		</a>
         
 	</div>
@@ -38,15 +38,15 @@
 		<canvas id="can" height=300px width=300px onmouseover="check()"></canvas>
         
 		<div class="grid">
-			<div class="top left"><img src="img/test/6.jpg" alt="picture test"/></div>
-			<div class="top center"><img src="img/test/7.jpg" alt="picture test"/></div>
-			<div class="top right"><img src="img/test/8.jpg" alt="picture test"/></div>
-			<div class="middle left"><img src="img/test/1.jpg" alt="picture test"/></div>
+			<div class="top left"><img src="/img/test/6.jpg" alt="picture test"/></div>
+			<div class="top center"><img src="{{$tile_above}}" alt="picture test"/></div>
+			<div class="top right"><img src="/img/test/8.jpg" alt="picture test"/></div>
+			<div class="middle left"><img src="{{$tile_left->url}}" alt="picture test"/></div>
 			
-			<div class="middle right"><img src="img/test/2.jpg" alt="picture test"/></div>
-			<div class="bottom left"><img src="img/test/4.jpg" alt="picture test"/></div>
-			<div class="bottom center"><img src="img/test/5.jpg" alt="picture test"/></div>
-			<div class="bottom right"><img src="img/test/3.jpg" alt="picture test"/></div>
+			<div class="middle right"><img src="{{$tile_right->url}}" alt="picture test"/></div>
+			<div class="bottom left"><img src="/img/test/4.jpg" alt="picture test"/></div>
+			<div class="bottom center"><img src="{{$tile_below}}" alt="picture test"/></div>
+			<div class="bottom right"><img src="/img/test/3.jpg" alt="picture test"/></div>
 		
 		</div>
 	</div>
@@ -63,9 +63,9 @@
 		</div>
         
         <div class="brushBox">
-            <img src="img/brush2.png" alt="small brush" onclick="brushChange(5)"/>
-            <img src="img/brush3.png" alt="medium brush" onclick="brushChange(12)"/>
-            <img src="img/brush4.png" alt="large brush" onclick="brushChange(22)"/>
+            <img src="/img/brush2.png" alt="small brush" onclick="brushChange(5)"/>
+            <img src="/img/brush3.png" alt="medium brush" onclick="brushChange(12)"/>
+            <img src="/img/brush4.png" alt="large brush" onclick="brushChange(22)"/>
         </div>
 	</div>
     <div class="Confirm ConfirmHidden"> 
@@ -79,7 +79,7 @@
 	
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" ></script>
-    <script src="script/main.js"></script>
+    <script src="/script/main.js"></script>
 
 	
 </body>
