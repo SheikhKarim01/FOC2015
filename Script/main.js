@@ -123,12 +123,38 @@ function initButtons(){
     
     $('.brushBox img').on("click",function(){
         if ($(this).attr('id') == "small"){
+            
+            $(this).addClass('selectedBrush');
+            
+            $("#medium").removeClass('selectedBrush');
+            $("#large").removeClass('selectedBrush');
+            $("#mega").removeClass('selectedBrush');
             y = 5;
+            
         }else if($(this).attr('id') == "medium"){
+            
+            $(this).addClass('selectedBrush');
+            
+            $("#small").removeClass('selectedBrush');
+            $("#large").removeClass('selectedBrush');
+            $("#mega").removeClass('selectedBrush');
+            
             y=12;
         }else if($(this).attr('id') == "large"){
+            
+            $(this).addClass('selectedBrush');
+            
+            $("#small").removeClass('selectedBrush');
+            $("#medium").removeClass('selectedBrush');
+            $("#mega").removeClass('selectedBrush');
             y=22;
         }else if($(this).attr('id') == "mega"){
+            
+            $(this).addClass('selectedBrush');
+            
+            $("#small").removeClass('selectedBrush');
+            $("#large").removeClass('selectedBrush');
+            $("#medium").removeClass('selectedBrush');
             y=100;
         }
     });
