@@ -110,8 +110,8 @@ body {
 
 canvas, #can {
     position: absolute;
-    top: calc(50% - 500px);
-    left: calc(50% - 525px);
+    top: calc(50% - 150px);
+    left: calc(50% - 224px);
     border: 1px solid #222;
     background-color: #fff;
     z-index: 2;
