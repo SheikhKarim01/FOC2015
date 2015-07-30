@@ -1,0 +1,48 @@
+{
+    "name": "ktquez/lumen-image",
+    "description": "Image manipulation library Lumen Framework based on Imagine and inspired by Croppa for easy url based manipulation",
+    "keywords": ["lumen","image","imagick","gd","imagine","watermark","gmagick","thumbnail"],
+    "homepage": "https://github.com/ktquez/lumen-image",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Folklore",
+            "email": "info@atelierfolklore.ca",
+            "homepage": "http://atelierfolklore.ca"
+        },
+        {
+            "name": "David Mongeau-Petitpas",
+            "email": "dmp@atelierfolklore.ca",
+            "homepage": "http://mongo.ca",
+            "role": "Developer"
+        },
+        {
+            "name": "Alan Albuquerque (ktquez)",
+            "email": "ktquez@gmail.com",
+            "homepage": "http://ktquez.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~5.0",
+        "imagine/imagine": "0.6.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.0.*"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git://github.com/orchestral/phpseclib.git"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "tests/ImageTestCase.php"
+        ],
+        "psr-0": {
+            "Folklore\\Image\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
