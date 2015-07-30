@@ -88,11 +88,19 @@ function initButtons(){
 
             console.log(dataURL);
 
+            var pathArray = window.location.pathname.split( '/' );
+            var p = pathArray[2];
+            var x = pathArray[3];
+            var y = pathArray[4];
+
             $.ajax({
                 type: "POST",
                 url: "/submit",
                 data: { 
-                 imgBase64: dataURL
+                 imgBase64: dataURL,
+                 p: p,
+                 x: x,
+                 y: y
                 }
             }).done(function(o) {
                 console.log('saved'); 

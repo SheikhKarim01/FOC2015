@@ -20,6 +20,8 @@ class CreatePaintingsTable extends Migration
             $table->integer('tileNumber');
             $table->integer('tilesDone');
             $table->string('url');
+            $table->timestamps();
+
 
         });
             // isFinished is if the

@@ -91,7 +91,7 @@ label img:hover, a img:hover{
 	position: absolute;
 	height: 300px;
 	width: 300px;
-	background-color: orangered;
+	background-color: white;
     overflow: hidden;
 }
 
