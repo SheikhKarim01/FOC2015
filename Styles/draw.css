@@ -169,15 +169,25 @@ canvas:active,#can:active{
     opacity: 1;
 }
 
-#green, #blue, #red, #orange, #yellow, #black, #white {
+.column1,.column2{
+    width: 50%;
+    height: 80%;
+    float: right;
+}
+
+.colourPick {
     position: relative;
+    float: right;
     width: 100%;
-    height: -webkit-calc((100% / 7) - (50px / 7));
-    height: calc((100% / 7) - (50px / 7));
+    height: -webkit-calc((100% / 7));
+    height: calc((100% / 7));
     display: block;
     transition: 0.2s all ease;
     cursor: pointer;
 }
+
+
+
 
 #green {
     background-color: #2ECC40;
@@ -203,6 +213,32 @@ canvas:active,#can:active{
     background-color: #0C0C0C;
 }
 
+#purple{
+    background-color: #B10DC9;
+}
+
+#lightBlue{
+    background-color: #7FDBFF;
+}
+
+#pink{
+    background-color: #FF75D1;
+}
+
+#magenta{
+    background-color: #990000;
+}
+
+#brown{
+    background-color: #331A00;
+}
+
+#grey{
+    background-color: #555;
+}
+
+
+
 #white {
     background-color: #eee;
     color: #3b3a3f;
@@ -211,13 +247,15 @@ canvas:active,#can:active{
 }
 
 .brushBox{
-    padding-top: 15%;
+    padding-top:0;
+    width: 100%;
+    height: 10%;
 }
 
 .brushBox img{
-    margin: 3px 3spx;
+    margin: 3px 3px;
     cursor: pointer;
-   
+    padding-top: 
 }
 
 .brushBox img:hover,.selectedBrush{
@@ -316,6 +354,15 @@ form{
       left: calc(50% - 150px);
     }
 
+    .column1{
+        width: 40%;
+        float: right;
+    }
+    .column2{
+        width: 40%;
+        float: right;
+    }
+    
     .colourPicker {
         width: 100%;
         height: 15%;
@@ -324,11 +371,16 @@ form{
         z-index: 3;
     }
 
-    #green, #blue, #red, #orange, #yellow, #black, #white {
-        width: calc((80% / 7) - (50px / 7));
+    #green, #blue, #red, #orange, #yellow, #black, #white,#purple,#pink,#lightBlue,#magenta,#brown,#grey {
+        width: calc((80% / 7));
         height: 100%;
-        float: left;
+        float: right;
     }
+    
+    .second {
+        width: 0;
+    }
+    
     
     #white{
         width: calc(((100% / 7) - (50px / 7)) * 0.7);

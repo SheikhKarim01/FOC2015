@@ -121,6 +121,26 @@ function initButtons(){
         case "white":
             x = "white";
             break;
+        case "purple":
+            x = "#B10DC9";
+            break;
+        case "lightBlue":
+            x = "#7FDBFF";
+            break;
+        case "pink":
+            x = "#FF75D1";
+            break;
+        case "magenta":
+            x = "#990000";
+            break;
+        case "brown":
+            x = "#331A00";
+            break;
+        case "grey":
+            x = "#555";
+            break;
+        
+                
     }
         
     });
