@@ -114,8 +114,13 @@ canvas, #can {
     left: calc(50% - 224px);
     border: 1px solid #222;
 <<<<<<< HEAD
+<<<<<<< HEAD
     background-color: #f1f1f2;
     z-index: 3;
+=======
+    background-color: #fff;
+    z-index: 2;
+>>>>>>> origin/master
 =======
     background-color: #fff;
     z-index: 2;
