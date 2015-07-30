@@ -130,6 +130,27 @@ $app->post('/submit', function(Request $request) use($app) {
 		file_put_contents('img/' . $p . '/' . $x . $y . '.png', $data);
 	}
 
+	$img = imagecreatefrompng('img/' . $p . '/' . $x . $y . '.png');
+	$white = imagecolorallocate($img, 255, 255, 255);
+	imagefilledrectangle($img, 0, 75, 300, 300, $white);
+	imagepng($img, 'img/' . $p . '/' . $x . $y . '_top.png');
+
+	$img = imagecreatefrompng('img/' . $p . '/' . $x . $y . '.png');
+	$white = imagecolorallocate($img, 255, 255, 255);
+	imagefilledrectangle($img, 0, 0, 300, 225, $white);
+	imagepng($img, 'img/' . $p . '/' . $x . $y . '_bottom.png');
+
+	$img = imagecreatefrompng('img/' . $p . '/' . $x . $y . '.png');
+	$white = imagecolorallocate($img, 255, 255, 255);
+	imagefilledrectangle($img, 0, 75, 300, 300, $white);
+	imagepng($img, 'img/' . $p . '/' . $x . $y . '_left.png');
+
+	$img = imagecreatefrompng('img/' . $p . '/' . $x . $y . '.png');
+	$white = imagecolorallocate($img, 255, 255, 255);
+	imagefilledrectangle($img, 0, 75, 300, 300, $white);
+	imagepng($img, 'img/' . $p . '/' . $x . $y . '_right.png');
+
+
 	$painting = \App\Painting::find($p);
 	$tile = $painting->tiles()
 		->where('x', '=', $x)
