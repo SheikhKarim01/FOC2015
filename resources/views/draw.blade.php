@@ -38,15 +38,15 @@
 		<canvas id="can" height=300px width=300px onmouseover="check()"></canvas>
         
 		<div class="grid">
-			<div class="top left"><img src="/img/test/6.jpg" alt="picture test"/></div>
+			<div class="top left"><img src="{{$tile_tl}}" alt="picture test"/></div>
 			<div class="top center"><img src="{{$tile_above}}" alt="picture test"/></div>
-			<div class="top right"><img src="/img/test/8.jpg" alt="picture test"/></div>
-			<div class="middle left"><img src="{{$tile_left->url}}" alt="picture test"/></div>
+			<div class="top right"><img src="{{$tile_tr}}" alt="picture test"/></div>
+			<div class="middle left"><img src="{{$tile_left}}" alt="picture test"/></div>
 			
-			<div class="middle right"><img src="{{$tile_right->url}}" alt="picture test"/></div>
-			<div class="bottom left"><img src="/img/test/4.jpg" alt="picture test"/></div>
+			<div class="middle right"><img src="{{$tile_right}}" alt="picture test"/></div>
+			<div class="bottom left"><img src="{{$tile_bl}}" alt="picture test"/></div>
 			<div class="bottom center"><img src="{{$tile_below}}" alt="picture test"/></div>
-			<div class="bottom right"><img src="/img/test/3.jpg" alt="picture test"/></div>
+			<div class="bottom right"><img src="{{$tile_br}}" alt="picture test"/></div>
 		
 		</div>
 	</div>

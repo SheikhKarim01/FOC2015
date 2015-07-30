@@ -26,6 +26,8 @@ $app->get('/', function() use ($app) {
 $app->get('/draw/{id}/{x}/{y}', function($id, $x, $y) use ($app) {
 	$painting = \App\Painting::find($id);
 
+
+	// Top center tile
 	if ($y != 0) {
 		$tile_above = $painting->tiles()
 		->where('x', '=', $x)
@@ -34,6 +36,7 @@ $app->get('/draw/{id}/{x}/{y}', function($id, $x, $y) use ($app) {
 		$tile_above = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=300%C3%97300&w=300&h=300';
 	}
 
+	// Bottom center tile
 	if ($y != 2) {
 		$tile_below = $painting->tiles()
 		->where('x', '=', $x)
@@ -42,19 +45,70 @@ $app->get('/draw/{id}/{x}/{y}', function($id, $x, $y) use ($app) {
 		$tile_below = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=300%C3%97300&w=300&h=300';
 	}
 
-	$tile_left= $painting->tiles()
-	->where('x', '=', $x-1)
-	->where('y', '=', $y)->get()->first();
+	// Left center tile
+	if ($x !=0) {
+		$tile_left= $painting->tiles()
+		->where('x', '=', $x-1)
+		->where('y', '=', $y)->get()->first()->url;
+	} else {
+		$tile_left = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=300%C3%97300&w=300&h=300';
+	}
 
-	$tile_right = $painting->tiles()
-	->where('x', '=', $x+1)
-	->where('y', '=', $y)->get()->first();
+	// Right center tile
+	if ($x !=2) {
+		$tile_right = $painting->tiles()
+		->where('x', '=', $x+1)
+		->where('y', '=', $y)->get()->first()->url;
+	} else {
+		$tile_right = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=300%C3%97300&w=300&h=300';
+	}
 
+	// Bottom right tile
+	if ($x !=2 && $y !=2) {
+		$tile_br = $painting->tiles()
+		->where('x', '=', $x+1)
+		->where('y', '=', $y+1)->get()->first()->url;
+	} else {
+		$tile_br = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=300%C3%97300&w=300&h=300';
+	}
+
+	// Bottom left tile
+	if ($x !=0 && $y !=2) {
+		$tile_bl = $painting->tiles()
+		->where('x', '=', $x-1)
+		->where('y', '=', $y+1)->get()->first()->url;
+	} else {
+		$tile_bl = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=300%C3%97300&w=300&h=300';
+	}
+
+	// Top right tile
+	if ($x !=2 && $y !=0) {
+		$tile_tr = $painting->tiles()
+		->where('x', '=', $x+1)
+		->where('y', '=', $y-1)->get()->first()->url;
+	} else {
+		$tile_tr = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=300%C3%97300&w=300&h=300';
+	}
+
+	// Top left tile
+	if ($x !=0 && $y !=0) {
+		$tile_tl = $painting->tiles()
+		->where('x', '=', $x-1)
+		->where('y', '=', $y-1)->get()->first()->url;
+	} else {
+		$tile_tl = 'https://placeholdit.imgix.net/~text?txtsize=33&txt=300%C3%97300&w=300&h=300';
+	}
+
+	
     return view('draw')
     ->with('tile_above', $tile_above)
     ->with('tile_below', $tile_below)
     ->with('tile_left', $tile_left)
-    ->with('tile_right', $tile_right);
+    ->with('tile_right', $tile_right)
+    ->with('tile_br', $tile_br)
+    ->with('tile_bl', $tile_bl)
+    ->with('tile_tr', $tile_tr)
+    ->with('tile_tl', $tile_tl);
 });
 
 
@@ -65,7 +119,8 @@ $app->get('/submit', function() use($app) {
 $app->post('/submit', function(Request $request) use($app) {
 	$data = $request->input('imgBase64');
 	$data = base64_decode(preg_replace('#^data:image/\w+;base64,#i', '', $data));
-	file_put_contents('img/upload.png', $data);
+	mkdir("img/1/", 0700);
+	file_put_contents('img/1/1.png', $data);
 });
 
 $app->get('/{id}', function($id) use ($app) {
