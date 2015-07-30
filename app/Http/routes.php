@@ -143,6 +143,12 @@ $app->post('/submit', function(Request $request) use($app) {
 	
 });
 
+
+
+
+
+
+
 $app->get('/{id}', function($id) use ($app) {
 
 	$painting = \App\Painting::find($id);

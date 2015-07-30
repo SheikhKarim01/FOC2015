@@ -34,7 +34,6 @@ $(document).ready(function(){
 
 
 
-
 function draw() {
     ctx.beginPath();
     ctx.moveTo(prevX, prevY);
@@ -49,34 +48,45 @@ function draw() {
 function initButtons(){
     
     console.log('Initialise buttons...');
-    
-    $(".button-save").on("click",function(){
+
+     $(".button-save").on("click",function(){
         $(".confirm").removeClass("confirmHidden");
     });
 
-    $("#submit").on("click",  function(e) {
-        
-        e.preventDefault();
-            
-        var dataURL = canvas.toDataURL();
+    $('#submit').on("click",  function(e) {
 
-        $.ajax({
-            type: "POST",
-            url: "/upload",
-            data: { 
-             imgBase64: dataURL
-            }
-        }).done(function(o) {
-            console.log('saved'); 
-            
-        });
+            e.preventDefault();
 
-        document.location.href = "/";
+            var dataURL = canvas.toDataURL();
 
+            console.log(dataURL);
+
+            var pathArray = window.location.pathname.split( '/' );
+            var p = pathArray[2];
+            var x = pathArray[3];
+            var y = pathArray[4];
+
+            $.ajax({
+                type: "POST",
+                url: "/submit",
+                data: { 
+                 imgBase64: dataURL,
+                 p: p,
+                 x: x,
+                 y: y
+                }
+            }).done(function(o) {
+                console.log('saved'); 
+                // If you want the file to be visible in the browser 
+                // - please modify the callback in javascript. All you
+                // need is to return the url to the file, you just saved 
+                // and than put the image in your browser.
+            });
+            document.location.href = "/";
     });
 
     $('.button-clear').on("click", function(){
-        
+
         var r = confirm("Are you sure you want to clear this drawing?");
         
         if (r == true){
@@ -196,6 +206,7 @@ function initButtons(){
     $(".confirm img").on("click",function(){
         $(".confirm").addClass("confirmHidden")
     })
+
 }
 
 function findxy(res, e) {
@@ -229,3 +240,7 @@ function findxy(res, e) {
     }
 }
 
+
+function brushChange(size){
+    y = size;
+}
