@@ -21,6 +21,7 @@ class CreatePaintingsTable extends Migration
             $table->integer('tilesDone');
             $table->string('url');
             $table->integer('median');
+            $table->timestamps();
 
         });
             // isFinished is if the

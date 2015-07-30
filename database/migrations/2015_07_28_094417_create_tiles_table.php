@@ -21,7 +21,7 @@ class CreateTilesTable extends Migration
             $table->integer('y');
             $table->integer('painting_id')->unsigned();
             $table->foreign('painting_id')->references('id')->on('paintings');
-
+            $table->timestamps();
 
         });
 
