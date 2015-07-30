@@ -23,6 +23,7 @@ $app->get('/', function() use ($app) {
     	->with('paintings', $paintings);
 });
 
+
 $app->get('/draw/{id}/{x}/{y}', function($id, $x, $y) use ($app) {
 	$painting = \App\Painting::find($id);
 

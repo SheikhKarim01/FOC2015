@@ -23,27 +23,36 @@
     <header>
 
         <h1>
-           COLLAB<span class="blue" style="color: #66a1ff; display: inline}">ART</span>ATION
+           <img src="/img/Logo.png" alt="logo"/> 
         </h1>
         
 
     </header>
 
-    <h2>What is Collab<span style="color: #66a1ff; display: inline;">art</span>ation?</h2>
+    <h2>What is CollabART?</h2>
 
     <p>
-        Collab<span style="color: #66a1ff; display: inline;">art</span>ation is an app that allows random people from all over the world to work on a piece of art together. When you pick one of the themes you will be brought to a single frame in a grid and you will only be able to see the edges of the frames around that point. You should then connect your drawing to the ones around to help create a bigger piece of art.
+        CollabART is an app that allows random people from all over the world to work on a piece of art together. When you pick one of the themes you will be brought to a single frame in a grid and you will only be able to see the edges of the frames around that point. You should then connect your drawing to the ones around to help create a bigger piece of art.
 
     </p>
 
-    <h2>Themes:</h2>
+    <h2 class="ongoing">Current Drawings:</h2>
 
 
 @foreach ($paintings as $painting)
 
     <div class="themeBox">
 
+    <?php if ($painting->tilesDone === 9): ?>
+        <a href="/completetile" class="link">
+
+        <?php else: ?>
+    
         <a href="/{{ $painting->id }}" class="link">    
+          
+<?php endif ?>
+
+
 
             <div class="imgBox">
                 <img src="{{ $painting->url }}" alt="{{ $painting->url }}"/>

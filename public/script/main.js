@@ -32,8 +32,76 @@ $(document).ready(function(){
     
 });
 
-function color(obj) {
-    switch (obj.id) {
+
+
+
+function draw() {
+    ctx.beginPath();
+    ctx.moveTo(prevX, prevY);
+    ctx.lineTo(currX, currY);
+    ctx.strokeStyle = x;
+    ctx.lineCap = 'round';
+    ctx.lineWidth = y;
+    ctx.stroke();
+    ctx.closePath();
+}
+
+function initButtons(){
+    
+    console.log('Initialise buttons...');
+    
+    $(".button-save").on("click",function(){
+        $(".confirm").removeClass("confirmHidden");
+    });
+
+    $("#submit").on("click",  function(e) {
+        
+        e.preventDefault();
+            
+        var dataURL = canvas.toDataURL();
+
+        $.ajax({
+            type: "POST",
+            url: "/upload",
+            data: { 
+             imgBase64: dataURL
+            }
+        }).done(function(o) {
+            console.log('saved'); 
+            
+        });
+
+        document.location.href = "/";
+
+    });
+
+    $('.button-clear').on("click", function(){
+        
+        var r = confirm("Are you sure you want to clear this drawing?");
+        
+        if (r == true){
+            ctx.clearRect(0, 0, w, h);
+            return false;
+        }else{
+            return false;
+        }
+
+    });
+
+    $('.button-back').on("click", function() {
+
+        var m = confirm("Are you sure you want to go back to the main menu?");
+        if (m) {
+            ctx.clearRect(0, 0, w, h);
+            document.location.href = "/";
+        }
+
+    });
+
+    $('.colourPick').on("click",function(){
+        
+        
+        switch (this.id) {
         case "green":
             x = "#2ECC40";
             break;
@@ -55,83 +123,79 @@ function color(obj) {
         case "white":
             x = "white";
             break;
+        case "purple":
+            x = "#B10DC9";
+            break;
+        case "lightBlue":
+            x = "#7FDBFF";
+            break;
+        case "pink":
+            x = "#FF75D1";
+            break;
+        case "magenta":
+            x = "#990000";
+            break;
+        case "brown":
+            x = "#331A00";
+            break;
+        case "grey":
+            x = "#555";
+            break;
+        
+                
     }
-
-}
-
-function check(){
-    if (x == "white"){
-        document.getElementById("can").style.cursor = "url(Assets/Images/eraser2.png)";
-    }else{
-        document.getElementById("can").style.cursor = "crosshair";
-    }
-}
-
-function draw() {
-    ctx.beginPath();
-    ctx.moveTo(prevX, prevY);
-    ctx.lineTo(currX, currY);
-    ctx.strokeStyle = x;
-    ctx.lineCap = 'round';
-    ctx.lineWidth = y;
-    ctx.stroke();
-    ctx.closePath();
-}
-
-function initButtons(){
+        
+    });
     
-    console.log('Initialise buttons...');
-
-    $('.button-save').on("click",  function() {
-
-            var dataURL = canvas.toDataURL();
-
-            console.log(dataURL);
-
-            var pathArray = window.location.pathname.split( '/' );
-            var p = pathArray[2];
-            var x = pathArray[3];
-            var y = pathArray[4];
-
-            $.ajax({
-                type: "POST",
-                url: "/submit",
-                data: { 
-                 imgBase64: dataURL,
-                 p: p,
-                 x: x,
-                 y: y
-                }
-            }).done(function(o) {
-                console.log('saved'); 
-                // If you want the file to be visible in the browser 
-                // - please modify the callback in javascript. All you
-                // need is to return the url to the file, you just saved 
-                // and than put the image in your browser.
-            });
-
-    });
-
-    $('.button-clear').on("click", function(){
-
-        var m = confirm("Are you sure you want to clear?");
-        if (m) {
-            ctx.clearRect(0, 0, w, h);
-            document.getElementById("canvasimg").style.display = "none";
+    $('.brushBox img').on("click",function(){
+        if ($(this).attr('id') == "small"){
+            
+            $(this).addClass('selectedBrush');
+            
+            $("#medium").removeClass('selectedBrush');
+            $("#large").removeClass('selectedBrush');
+            $("#mega").removeClass('selectedBrush');
+            y = 5;
+            
+        }else if($(this).attr('id') == "medium"){
+            
+            $(this).addClass('selectedBrush');
+            
+            $("#small").removeClass('selectedBrush');
+            $("#large").removeClass('selectedBrush');
+            $("#mega").removeClass('selectedBrush');
+            
+            y=12;
+        }else if($(this).attr('id') == "large"){
+            
+            $(this).addClass('selectedBrush');
+            
+            $("#small").removeClass('selectedBrush');
+            $("#medium").removeClass('selectedBrush');
+            $("#mega").removeClass('selectedBrush');
+            y=22;
+        }else if($(this).attr('id') == "mega"){
+            
+            $(this).addClass('selectedBrush');
+            
+            $("#small").removeClass('selectedBrush');
+            $("#large").removeClass('selectedBrush');
+            $("#medium").removeClass('selectedBrush');
+            y=100;
         }
-
     });
-
-    $('.button-back').on("click", function() {
-
-        var m = confirm("Are you sure you want to go back to the main menu?");
-        if (m) {
-            ctx.clearRect(0, 0, w, h);
-            document.getElementById("canvasimg").style.display = "none";
+    
+    $("canvas").on("mouseover",function(){
+        if (x == "white"){
+            document.getElementById("can").style.cursor = "cell";
+        }else{
+            document.getElementById("can").style.cursor = "crosshair";
         }
-
     });
-
+    
+    $(".confirm img").on("click",function(){
+        $(".confirm").addClass("confirmHidden")
+    })
 }
 
 function findxy(res, e) {
@@ -165,7 +229,3 @@ function findxy(res, e) {
     }
 }
 
-
-function brushChange(size){
-    y = size;
-}
