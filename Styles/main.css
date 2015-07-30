@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,900);
 
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:900);
+
 *{
     margin:0;
     padding: 0;
@@ -7,16 +9,16 @@
 }
 
 body{
-    background: #111;
+    background: #3b3a3f;
 	font-family: Roboto, sans-serif;
 }
 
 ::selection{
-    background: #66FFCC;
+    background: #00ce9b;
 }
 
 ::-moz-selection{
-    background: #66FFCC;
+    background: #00ce9b;
 }
 
 span::-moz-selection {
@@ -29,37 +31,63 @@ span::selection{
   color: auto;
 }
 
-header h1{
+header {
+background: #3b3a3f;
+background: -moz-linear-gradient(top,  #2b3844 0%, #3b3a3f 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2b3844), color-stop(100%,#3b3a3f));
+background: -webkit-linear-gradient(top,  #2b3844 0%,#3b3a3f 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #2b3844 0%,#3b3a3f 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #2b3844 0%,#3b3a3f 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #2b3844 0%,#3b3a3f 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b3844', endColorstr='#3b3a3f',GradientType=0 ); /* IE6-9 */
+}
 
+header h1{
+	width: 100%;
+	height: auto;
     font-size: 100px;
     text-align: center;
     padding: 35px 0 80px 0;
     letter-spacing: 0px;
     color:#66FFCC;
+<<<<<<< HEAD
 	text-transform: uppercase;
+	font-weight: 900;
+	font-family: Source Sans Pro;
+	display: inline-block;
+=======
+>>>>>>> origin/master
 }
 
 h2{
-    color: #eee;
+    color: #f1f1f2;
     padding-left: 400px;
     font-size: 35px;
     font-weight: 400;
+	width: 100%;
+}
+
+h2:nth-of-type(1) {
+	background-color: #d1d2d4;
+	display: block;
+	color: #3b3a3f;
+	border-bottom: 2px solid #d1d2d4;
+	z-index: 2;
 }
 
 p{
-    padding: 20px 400px 150px 400px;
-    color: #eee;
+    padding: 20px 400px 50px 400px;
+    color: #3b3a3f;
+	background-color: #d1d2d4;
 }
 
 .themeBox{
     width: 100%;
     height: 150px;
-    margin: 50px 0;
+    margin: 25px 0;
     background: #222;
     box-sizing: border-box;
     overflow: auto;
-    
-
 }
 
 .link{
@@ -88,7 +116,6 @@ p{
 
 
 .themeDetails{
-    
     height: 100%;
     width: 400px;
     padding: 10px 0 0 50px;   
@@ -114,7 +141,7 @@ progress{
     position: absolute;
     bottom: 0;
     width: 100%;
-
+	height: 5px;
 }
 
 .inProgress{
@@ -146,7 +173,13 @@ progress{
     transition: all 1s;
 }
 
-
+footer {
+	height: 25px;
+	border-top: 2px solid #353439;
+	line-height: 25px;
+	text-align: right;
+	color: #f1f1f2;
+}
 
 #buttons{
     height: 200px;
@@ -174,12 +207,14 @@ progress{
     
     p{
         padding: 0 0 50px 0;
-        width: 80%;
+        width: 100%;
+		padding-right: 50px;
+		padding-left: 50px;
         margin: 0 auto;
     }
     
     h2{
-        padding: 0;
+        padding: 50px;
         text-align: center;
     }
     

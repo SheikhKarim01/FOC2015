@@ -74,10 +74,14 @@ function initButtons(){
     });
 
     $('.button-clear').on("click", function(){
-
-        var m = confirm("Are you sure you want to clear?");
-        if (m) {
+        
+        var r = confirm("Are you sure you want to clear this drawing?");
+        
+        if (r == true){
             ctx.clearRect(0, 0, w, h);
+            return false;
+        }else{
+            return false;
         }
 
     });
@@ -123,12 +127,38 @@ function initButtons(){
     
     $('.brushBox img').on("click",function(){
         if ($(this).attr('id') == "small"){
+            
+            $(this).addClass('selectedBrush');
+            
+            $("#medium").removeClass('selectedBrush');
+            $("#large").removeClass('selectedBrush');
+            $("#mega").removeClass('selectedBrush');
             y = 5;
+            
         }else if($(this).attr('id') == "medium"){
+            
+            $(this).addClass('selectedBrush');
+            
+            $("#small").removeClass('selectedBrush');
+            $("#large").removeClass('selectedBrush');
+            $("#mega").removeClass('selectedBrush');
+            
             y=12;
         }else if($(this).attr('id') == "large"){
+            
+            $(this).addClass('selectedBrush');
+            
+            $("#small").removeClass('selectedBrush');
+            $("#medium").removeClass('selectedBrush');
+            $("#mega").removeClass('selectedBrush');
             y=22;
         }else if($(this).attr('id') == "mega"){
+            
+            $(this).addClass('selectedBrush');
+            
+            $("#small").removeClass('selectedBrush');
+            $("#large").removeClass('selectedBrush');
+            $("#medium").removeClass('selectedBrush');
             y=100;
         }
     });
