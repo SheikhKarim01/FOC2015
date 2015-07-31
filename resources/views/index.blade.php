@@ -44,7 +44,7 @@
     <div class="themeBox">
 
     <?php if ($painting->tilesDone === 9): ?>
-        <a href="/completetile" class="link">
+        <a href="/preview" class="link">
 
         <?php else: ?>
     
@@ -65,11 +65,11 @@
 
                 <h3 class="inProgress dis">
                 @if ($painting->tilesDone === $painting->tileNumber)
-                    <h3>Complete</h3>
+                     <h3>Complete</h3>
                 @elseif($painting->tilesDone === ($painting->tileNumber) - $painting->tileNumber)
-                  <h3>Not Started</h3>
+                     <h3>Not Started</h3>
                 @else 
-                    <h3>In Progress</h3>
+                     <h3>In Progress</h3>
                 @endif
 
 

@@ -378,4 +378,16 @@ form{
     .brushBox{
         padding: 10px 0;
     }
+
+
+    #previewGrid{
+    margin: 0 auto;
+    display: block;
+    top: calc(50% - 450px);
+    left: calc(50% - 450px);
+    }
+
+    #previewBack{
+    margin-top: 50px;
+    }
 }

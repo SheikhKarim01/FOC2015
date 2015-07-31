@@ -23,6 +23,13 @@ $app->get('/', function() use ($app) {
     	->with('paintings', $paintings);
 });
 
+$app->get('/preview', function() use ($app) {
+
+	$preview = \App\Painting::all();
+    return view('preview')
+    	->with('preview', $preview);
+});
+
 
 $app->get('/draw/{id}/{x}/{y}', function($id, $x, $y) use ($app) {
 	$painting = \App\Painting::find($id);
