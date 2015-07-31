@@ -73,6 +73,8 @@ body {
     top: calc(50% - 449px);
     left: calc(50% - 523px);
     z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .middle, .top, .bottom {
