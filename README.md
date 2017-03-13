@@ -7,6 +7,6 @@ Welcome.
 
 + Ben
 + Tommy
-+ Tom is not the best
++ Tom is the best
 + Sheikh
 + Anton
